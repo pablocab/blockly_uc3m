@@ -101,6 +101,7 @@ Blockly.Java.ORDER_LOGICAL_OR = 14;    // ||
 Blockly.Java.ORDER_CONDITIONAL = 15;   // ?:
 Blockly.Java.ORDER_ASSIGNMENT = 16;    // = += -= *= /= %= <<= >>= ...
 Blockly.Java.ORDER_COMMA = 17;         // ,
+Blockly.Java.ORDER_EQUALITY_ST = 18;       // .equals
 Blockly.Java.ORDER_NONE = 99;          // (...)
 
 /**

@@ -325,7 +325,8 @@ h1 {
     </category>
     <category name="Colour">
       <block type="colour_picker"></block>
-      <block type="colour_random"></block>
+      <block type="colour_random"></block>      
+	<block type="colour_pablo"></block>
       <block type="colour_rgb">
         <value name="RED">
           <block type="math_number">

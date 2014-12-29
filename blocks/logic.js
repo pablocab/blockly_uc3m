@@ -255,6 +255,37 @@ Blockly.Blocks['controls_if_else'] = {
   }
 };
 
+Blockly.Blocks['logic_compare_strings'] = {
+  /**
+   * Block for comparison operator.
+   * @this Blockly.Block
+   */
+  init: function() {
+    var OPERATORS = Blockly.RTL ? [
+          ['equals string', 'EQ'],
+        ] : [
+          ['equals string', 'EQ'],
+        ];
+    this.setHelpUrl(Blockly.Msg.LOGIC_COMPARE_HELPURL);
+    this.setColour(255);
+    this.setOutput(true, 'Boolean');
+    this.appendValueInput('A');
+    this.appendValueInput('B')
+        .appendField(new Blockly.FieldDropdown(OPERATORS), 'OP');
+    this.setInputsInline(true);
+    var thisBlock = this;
+    this.setTooltip(function() {
+      var op = thisBlock.getFieldValue('OP');
+      var TOOLTIPS = {
+        'EQ': Blockly.Msg.LOGIC_COMPARE_TOOLTIP_EQ
+      };
+      return TOOLTIPS[op];
+    });
+  }
+};
+
+
+
 Blockly.Blocks['logic_compare'] = {
   /**
    * Block for comparison operator.
