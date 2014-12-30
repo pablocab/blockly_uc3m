@@ -262,16 +262,17 @@ Blockly.Blocks['logic_compare_strings'] = {
    */
   init: function() {
     var OPERATORS = Blockly.RTL ? [
-          ['equals string', 'EQ'],
+          ['is equal to(strings)', 'EQ'],
         ] : [
-          ['equals string', 'EQ'],
+          ['is equal to(strings)', 'EQ'],
         ];
-    this.setHelpUrl(Blockly.Msg.LOGIC_COMPARE_HELPURL);
-    this.setColour(255);
+    this.setColour(77);
     this.setOutput(true, 'Boolean');
-    this.appendValueInput('A');
+    this.appendValueInput('A')
+        .setCheck('String');
     this.appendValueInput('B')
-        .appendField(new Blockly.FieldDropdown(OPERATORS), 'OP');
+        .appendField(new Blockly.FieldDropdown(OPERATORS), 'OP')
+        .setCheck('String');
     this.setInputsInline(true);
     var thisBlock = this;
     this.setTooltip(function() {

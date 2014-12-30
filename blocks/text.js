@@ -566,6 +566,23 @@ Blockly.Blocks['text_print'] = {
   }
 };
 
+Blockly.Blocks['text_print_console'] = {
+  /**
+   * Block for print statement.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.setColour(77);
+    this.appendValueInput('TEXT')
+        .setCheck('String')
+	.appendField('print_console');
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.contextMenu = false;
+  }
+};
+
+
 Blockly.Blocks['text_prompt'] = {
   /**
    * Block for prompt function (internal message).

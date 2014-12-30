@@ -232,6 +232,12 @@ Blockly.Java['text_print'] = function(block) {
       Blockly.Java.ORDER_NONE) || '\'\'';
   return 'window.alert(' + argument0 + ');\n';
 };
+Blockly.Java['text_print_console'] = function(block) {
+  // Print statement.
+  var argument0 = Blockly.Java.valueToCode(block, 'TEXT',
+      Blockly.Java.ORDER_NONE) || '\'\'';
+  return 'System.out.print(' + argument0 + ');\n';
+};
 
 Blockly.Java['text_prompt'] = function(block) {
   // Prompt function (internal message).

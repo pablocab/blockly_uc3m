@@ -55,11 +55,11 @@ Blockly.Java['logic_compare_strings'] = function(block) {
     'EQ': '.equals',
   };
   var operator = OPERATORS[block.getFieldValue('OP')];
-  var order = (operator == '==' || operator == '!=') ?
+  var order = (operator == '==') ?
       Blockly.Java.ORDER_EQUALITY : Blockly.Java.ORDER_RELATIONAL;
   var argument0 = Blockly.Java.valueToCode(block, 'A', order) || '0';
   var argument1 = Blockly.Java.valueToCode(block, 'B', order) || '0';
-  var code = argument0+ operator + '(' + argument1 + ')';
+  var code = argument0+ operator + '(' + argument1 + ')==true';
   return [code, order];
 };
 
